@@ -52,9 +52,9 @@ button:focus-visible{outline:3px solid var(--tape);outline-offset:2px}
 .pill{display:inline-block;font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:4px;border:1.5px solid}
 .pill.in{color:var(--spruce);border-color:var(--spruce)}
 .pill.out{color:var(--out);border-color:var(--out)}
-.btn{font:600 .9rem var(--body);border:0;border-radius:6px;padding:8px 12px;cursor:pointer;background:var(--spruce);color:var(--spruce-ink);width:100%}
-.btn:disabled{background:transparent;color:var(--muted);border:1.5px dashed var(--line);cursor:not-allowed}
-.btn.on{background:var(--tape);color:var(--tape-ink)}
+.gl-btn{font:600 .9rem var(--body);border:0;border-radius:6px;padding:8px 12px;cursor:pointer;background:var(--spruce);color:var(--spruce-ink);width:100%}
+.gl-btn:disabled{background:transparent;color:var(--muted);border:1.5px dashed var(--line);cursor:not-allowed}
+.gl-btn.on{background:var(--tape);color:var(--tape-ink)}
 .detail{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:20px;padding:4px 4px 18px 68px}
 .detail[hidden]{display:none}
 .photos .main{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;border:1px solid var(--line);background:var(--panel);display:block}
@@ -66,7 +66,7 @@ button:focus-visible{outline:3px solid var(--tape);outline-offset:2px}
 .req label{display:block;font-size:.85rem;color:var(--muted);margin-top:10px}
 .req input,.req textarea{display:block;width:100%;font:inherit;color:var(--ink);background:var(--fog);border:1.5px solid var(--line);border-radius:6px;padding:7px 10px;margin-top:3px}
 .req .two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.req .btn{border:0}
+.req .gl-btn{border:0}
 #formmsg{margin:10px 0 0}
 .empty{padding:40px 8px;color:var(--muted)}
 aside{position:sticky;top:16px;background:var(--panel);border:1.5px solid var(--ink);border-radius:10px;padding:18px}
@@ -80,7 +80,7 @@ aside h2{font:800 1.4rem/1 var(--display);margin:0 0 4px}
 .bar.over i{background:var(--out)}
 .limit{display:flex;align-items:center;gap:8px;font-size:.88rem;color:var(--muted)}
 .limit input{width:90px;padding:5px 8px}
-aside .btn{margin-top:14px;display:block;text-align:center;text-decoration:none}
+aside .gl-btn{margin-top:14px;display:block;text-align:center;text-decoration:none}
 footer{border-top:1px solid var(--line);padding:20px 0 30px;font-size:.85rem;color:var(--muted)}
 code{font-size:.85em;background:var(--panel);padding:1px 5px;border-radius:3px}
 @media (max-width:900px){
