@@ -1,5 +1,5 @@
-<script>
 // ---- Configuration: change these for your repo ----
+const BASE = document.getElementById("gear-library").dataset.base;
 // Primary source: a Google Sheet. Share it as "Anyone with the link can view", then paste its ID
 // (the long string in the sheet URL between /d/ and /edit) and the name of the tab to read.
 const SHEET_ID  = "1oEgN2sb9GXCfPA3CekSbCLOMXHhFhyfJ8UDudxoBPEI";                      // e.g. "1AbC...xyz"
@@ -204,4 +204,3 @@ $("req").addEventListener("submit", async e=>{
 // Any image that fails to load (missing file, bad URL) gets the placeholder
 document.addEventListener("error",e=>{ const t=e.target; if(t.tagName==="IMG"&&!t.dataset.fb){ t.dataset.fb="1"; t.src=PH; } },true);
 load();
-</script>
