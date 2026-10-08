@@ -65,7 +65,7 @@ aside h2{font:800 1.4rem/1 var(--display);margin:0 0 4px}
 .limit{display:flex;align-items:center;gap:8px;font-size:.88rem;color:var(--muted)}
 .limit input{width:90px;padding:5px 8px}
 aside .gl-btn{margin-top:14px;display:block;text-align:center;text-decoration:none}
-@media (max-width:900px){
+@media (max-width:1100px){
   main{grid-template-columns:1fr}
   aside{position:static;order:-1}
 }
