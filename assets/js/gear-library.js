@@ -7,7 +7,7 @@ const SHEET_TAB = "Gear";                  // tab name
 // Optional: instead of the two lines above, use File > Share > Publish to web > CSV and paste that link here.
 const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQpI0C1iVCs4YuvRtEBJ_kIGRfEdMfB5aRvPxtHjFnYi5CKK9oZcpRodxP42O-T2EPEPoGVgxy_-Et0/pub?gid=0&single=true&output=csv";
 // Backup source if the Google Sheet is unset or unreachable: an .xlsx file in this repo.
-const XLSX_PATH = "gear.xlsx";
+const XLSX_PATH = BASE + "gear.xlsx";
 // Requests are submitted straight to a Google Form from the loadout panel. Set it up like this:
 // 1. Create the form with these questions: name (short answer), email (short answer), pickup date and return date
 //    (Date type), notes (paragraph), items (paragraph), total weight (short answer). Leave out any you don't want.
@@ -58,7 +58,7 @@ function normalize(rows){
   return rows.map((r,n)=>{
     const id = String(pick(r,"id") || "ROW-"+n);
     let photos = String(pick(r,"photos","photo","images","image")).split(/[;,|]/).map(x=>x.trim()).filter(Boolean);
-    if (!photos.length) photos = ["photos/"+id+".jpg"];
+    if (!photos.length) photos = [BASE+"photos/"+id+".jpg"];
     return {
       id, photos,
       item: String(pick(r,"item","name")),
