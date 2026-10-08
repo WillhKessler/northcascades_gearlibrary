@@ -9,6 +9,42 @@ author_profile: false
 <link rel="stylesheet" href="{{ '/assets/css/gear-library.css' | relative_url }}">
 
 <div id="gear-library" data-base="{{ '/assets/gear/' | relative_url }}">
+  <div class="stats" id="stats" aria-live="polite"></div><main>
+  <section aria-label="Gear catalog">
+    <div class="controls">
+      <input type="search" id="q" placeholder="Search item, brand or notes" aria-label="Search gear">
+      <select id="sort" aria-label="Sort by">
+        <option value="item">Sort: name</option>
+        <option value="weight">Sort: lightest first</option>
+        <option value="category">Sort: category</option>
+      </select>
+      <select id="sub" aria-label="Filter by subcategory"></select>
+      <label class="toggle"><input type="checkbox" id="avail"> Available only</label>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+    <p class="source" id="source"></p>
+    <ul class="rows" id="rows">
+      <li class="row head" aria-hidden="true"><span></span><span>Item</span><span>Category</span><span>Weight</span><span>Status</span><span></span></li>
+    </ul>
+  </section>
+
+  <aside aria-label="Your loadout">
+    <h2>Your loadout</h2>
+    <div class="sub" id="count">Nothing added yet</div>
+    <ul class="tray" id="tray"></ul>
+    <form class="req" id="req">
+      <label>Your name<input id="f-name" required autocomplete="name"></label>
+      <label>Email<input id="f-email" type="email" required autocomplete="email"></label>
+      <div class="two">
+        <label>Pickup date<input id="f-pickup" type="date" required></label>
+        <label>Return date<input id="f-return" type="date" required></label>
+      </div>
+      <label>Notes (optional)<textarea id="f-notes" rows="2" placeholder="Trip details, questions"></textarea></label>
+      <button class="btn" id="send" type="submit" disabled>Submit request</button>
+      <p class="sub" id="formmsg" role="status" aria-live="polite"></p>
+    </form>
+  </aside>
+</main>
   <!-- paste from index.html: the stats div and the whole <main>...</main> block -->
   <!-- leave out <header>, the big "Ridgeline" heading, and <footer> -->
 </div>
