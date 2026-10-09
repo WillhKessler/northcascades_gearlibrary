@@ -8,7 +8,13 @@ author_profile: false
 <link rel="stylesheet" href="{{ '/assets/css/gear-library.css' | relative_url }}">
 
 <div id="gear-library" data-base="{{ '/assets/gear/' | relative_url }}">
-  <div class="stats" id="stats" aria-live="polite"></div><main>
+  <div class="gl-head">
+  <div class="top">
+    <h1 class="brand">North Cascades<span>Gear Library</span></h1>
+    <p class="intro">Borrow bikepacking gear for an hour, a day, a week, or longer! Select your item(s), then send a reservation request. Library loans are free and open to everyone.</p>
+  </div>
+  <div class="stats" id="stats" aria-live="polite"></div>
+</div>
   <section aria-label="Gear catalog">
     <div class="controls">
       <input type="search" id="q" placeholder="Search item, brand or notes" aria-label="Search gear">
