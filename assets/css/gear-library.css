@@ -73,3 +73,13 @@ aside .gl-btn{margin-top:14px;display:block;text-align:center;text-decoration:no
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 }
+.wide .initial-content,
+.wide .page,
+.wide .page__inner-wrap,
+.wide .page__content{
+  max-width:none;
+  width:100%;
+  float:none;
+  padding-right:0;
+}
+.wide .initial-content{padding-left:2rem;padding-right:2rem}
