@@ -184,12 +184,12 @@ function formPayload(picked, iso){
 }
 $("req").addEventListener("submit", async e=>{
   e.preventDefault();
-  const msg = $("formmsg"), gl-btn = $("send");
+  const msg = $("formmsg"), btn = $("send");
   const picked = state.items.filter(i=>state.loadout.has(i.id));
   if(!FORM_URL){ msg.textContent = "Requests are switched off until FORM_URL is set in the page script."; return; }
   if(!picked.length){ msg.textContent = "Add at least one item first."; return; }
   if($("f-return").value < $("f-pickup").value){ msg.textContent = "Return date must be on or after the pickup date."; return; }
-  gl-btn.disabled = true; msg.textContent = "Sending…";
+  btn.disabled = true; msg.textContent = "Sending…";
   try{
     // A static page can't read Google's reply (no-cors), so "sent" means the request left the browser.
     await fetch(FORM_URL.replace(/\/viewform.*$/,"/formResponse"), {method:"POST", mode:"no-cors", body:formPayload(picked,false)});
@@ -198,7 +198,7 @@ $("req").addEventListener("submit", async e=>{
   }catch(err){
     const link = FORM_URL + "?usp=pp_url&" + formPayload(picked,true).toString();
     msg.innerHTML = `Couldn't send. <a href="${esc(link)}" target="_blank" rel="noopener">Open the form instead</a>`;
-    gl-btn.disabled = false;
+    btn.disabled = false;
   }
 });
 // Any image that fails to load (missing file, bad URL) gets the placeholder
