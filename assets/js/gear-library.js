@@ -58,7 +58,7 @@ function normalize(rows){
   return rows.map((r,n)=>{
     const id = String(pick(r,"id") || "ROW-"+n);
     let photos = String(pick(r,"photos","photo","images","image")).split(/[;,|]/).map(x=>x.trim()).filter(Boolean);
-    if (!photos.length) photos = [BASE+"images/"+id+".JPG"];
+    if (!photos.length) photos = [BASE+"images/"+id+".JPG | .jpg"];
     return {
       id, photos,
       item: String(pick(r,"item","name")),
