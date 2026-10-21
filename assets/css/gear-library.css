@@ -14,6 +14,10 @@ max-width:1800px;margin:0 auto;padding:0 1.5rem;
 .stats{display:flex;gap:28px;margin-top:22px;flex-wrap:wrap}
 .stats div{font-size:.9rem;color:var(--muted)}
 .stats b{display:block;font:800 1.7rem/1 var(--display);color:var(--ink)}
+.gl-howto{background:var(--panel);border:1.5px solid var(--line);border-radius:10px;padding:18px 22px;margin:0 0 24px}
+.gl-howto h2{font:800 1.3rem/1.2 var(--display);margin:0 0 10px;color:var(--ink)}
+.gl-howto ol{margin:0;padding-left:1.3rem;display:grid;gap:6px;color:var(--ink)}
+.gl-howto b{color:var(--spruce)}
 main{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:28px;padding:24px 0 60px;align-items:start}
 .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
 input[type=search],select{font:inherit;color:var(--ink);background:var(--panel);border:1.5px solid var(--line);border-radius:6px;padding:9px 12px}
