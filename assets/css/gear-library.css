@@ -3,6 +3,7 @@
   --spruce:#2a5a4c; --spruce-ink:#fff; --tape:#f1c232; --tape-ink:#15231e; --out:#a5412f;
   --display:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue",Arial,sans-serif;
   --body:-apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Helvetica Neue",Arial,sans-serif;
+max-width:1400px;margin:0 auto;padding:0 1.5rem;
   
 .gl-head{padding:12px 0 22px;border-bottom:2px solid var(--ink);margin-bottom:24px}
 .gl-head{grid-column:1/-1;order:-2}
