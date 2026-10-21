@@ -1,2 +1,13 @@
 main:
-  
+  - title: "About"
+    url: /about/
+  - title: "Routes"
+    url: /routes/
+  - title: "Camping"
+    url: /camping/
+  - title: "Advocacy"
+    url: /advocacy/
+  - title: "Organizations"
+    url: /organizations/
+  - title: "Trip Reports"
+    url: /posts/
